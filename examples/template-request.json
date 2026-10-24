@@ -1,0 +1,74 @@
+{
+  "name": "Standard Fixed Rate",
+  "description": "Fixed monthly rates for mobile hire purchase.",
+  "type": "fixed_rate",
+  "minDownPaymentPercent": 10,
+  "maxDownPaymentPercent": 50,
+  "maxLoanAmount": 100000,
+  "fixedRateTerms": [
+    {
+      "months": 3,
+      "ratePercent": 1.25
+    },
+    {
+      "months": 6,
+      "ratePercent": 1.5
+    },
+    {
+      "months": 12,
+      "ratePercent": 1.75
+    },
+    {
+      "months": 24,
+      "ratePercent": 2
+    }
+  ],
+  "title": "Hire Purchase Agreement",
+  "bindingStatement": "This agreement is made between the Lessor and the Lessee, and both parties agree to the terms specified below.",
+  "legalDeclarations": "The Lessee acknowledges and agrees to pay according to the installment schedule below. Ownership transfers only after all payments have cleared.",
+  "penalty": {
+    "type": "fixed_rate",
+    "ratePercent": 1.5,
+    "graceDays": 3,
+    "maxCap": 3000,
+    "legalText": "If payment is late beyond the grace period, the Lessee agrees to pay a penalty at the specified rate, not to exceed the stated maximum cap."
+  },
+  "sections": [
+    {
+      "key": "parties",
+      "visible": true
+    },
+    {
+      "key": "asset",
+      "visible": true
+    },
+    {
+      "key": "paymentTerms",
+      "visible": true
+    },
+    {
+      "key": "legal",
+      "visible": true
+    },
+    {
+      "key": "schedule",
+      "visible": true
+    },
+    {
+      "key": "nationalId",
+      "visible": true
+    },
+    {
+      "key": "paymentSystem",
+      "visible": true
+    },
+    {
+      "key": "commission",
+      "visible": false
+    }
+  ],
+  "commission": {
+    "ratePercent": 0,
+    "text": ""
+  }
+}
